@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    padding: 0 100px 0 100px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.logo{
+    max-width: 100px ;
+}
+nav ul,
+.main-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.main-info{
+    padding-bottom: 900px;
+}
+.navbar {
+    background-color: #181818;
+
+}
+li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+header h1{
+    color: #009CAA;
+
+}
+
+header a{
+    color: #009CAA;
+    font-size: 18px;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: #009CAA;
+}
+.subject p{
+    color: #ED5565;
+}
+body{
+    background-color: #fff;
+}
+
+
+li{
+    list-style: none;
+    margin-left: 30px;
+}
+a{
+    text-decoration: none;
+    font-size: .9rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+a:hover{
+    color: #ED5565;
+}
+
+.nav{
+    position: fixed;
+    background: #181818;
+    color: #009CAA;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5 , 1);
+
+}
+.nav__list{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.nav__link{
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-toggle{
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav{
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle{
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before{
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after{
+    opacity: 0;
+}
+.hamburger{
+    display: block;
+    position: relative;
+
+}
+.hamburger::before,
+.hamburger::after,
+.hamburger{
+    background: white;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+.hamburger::before,
+.hamburger::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 6px;}
+.hamburger::after { bottom: 6px; }
+
+.profile-image img{
+    width: 450px;
+    margin-top: 50px;
+    border-radius: 10%;
+}
+
+.main-info{
+    height: calc(100vh - 81.6px);
+    background-color: #181818;
+    background-size: cover;
+}
+
+.main-text {
+    margin-top: 120px;
+}
+
+.main-text h1 {
+    color: #009CAA;
+    font-size: 3rem;
+    cursor: context-menu;
+}
+
+.main-text span{
+    display: inline-block;
+}
+
+span:hover {
+    color: #ED5565;
+    transition: all .5s;
+}
+
+span.name{
+    color: #ED5565;
+}
+span.name:hover{
+    color: #009CAA;
+
+}
+
+span.m-left{
+    margin-left: -10px;
+}
+span.m-left.name:hover{
+    color: #009CAA;
+}
+
+.main-text p {
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-size: .8rem;
+}
+
+.main-text a {
+    padding: 12px 25px;
+    border: 3px solid #ED5565;
+    color: #ED5565;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    transition: .5s;
+    display: inline-block;
+}
+
+.main-text a:hover{
+    color: #009CAA;
+}
+
+.main-text a::before{
+    content: '';
+    background-color: #ED5565;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.main-text a:hover::before{
+    height: 100%;
+}
+
+.about-me-info{
+    background-color: #181818;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+.my-skills,
+.my-work{
+    background-color: #181818;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.section__title--aboutMe,
+.section__title--skills,
+.section__title--PersonalSkills{
+    color: white;
+    position: relative;
+}
+
+
+
+.super{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 7.5px;
+    margin: 0.5em auto 1em;
+    background: #ED5565;
+    opacity: 0.25;
+}
+
+.personal,
+.subject{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.personal h3, .personal p,
+.subject h3{
+    padding-bottom: 20px;
+    color: white;
+}
+.subject p{
+    padding-bottom: 25px;
+}
+
+.educationQualifications h3{
+    color: white;
+}
+@media (min-width: 800px) {
+    .aboutMe {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .personal + .personal {
+        margin-left: 2em;
+    }
+}
+
+@media (min-width: 800px) {
+     .personalSkills{
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .subject + .subject {
+        margin-left: 2em;
+    }
+}
+@media (min-width: 800px) {
+    .profSkills{
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .subject + .subject {
+        margin-left: 2em;
+    }
+}
+
+.btn-cvDownload{
+    align-content: center;
+    color: #ED5565;
+    background-color: #181818;
+    display: inline-block;
+    border:0.15em solid;
+    border-radius:2em;
+    font-size: 15px;
+    padding: 13px 20px;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+
+}
+.btn-cvDownload:hover{
+    border-color: rgba(255,255,255,1);
+    color: #009CAA;
+
+}
+
+.footer{
+    background: #181818;
+    color: white;
+    text-align: center;
+    padding: 2.5em 0;
+}
+
+.footer a{
+    color: inherit;
+    text-decoration: none;
+}
+.footer p{
+    font-weight: bold;
+
+}
+
+.social-list__link:hover{
+    opacity: .7;
+}
+
+.fa-instagram:hover{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.fa-twitter:hover{
+    color: #1DA1F2;
+}
+.fa-envelope:hover{
+    color: #E65A4D;
+}
+.fa-linkedin-in:hover{
+    color: #0077B5;
+}
+.social-lists{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+    font-size: 2em;
+}
+.checked,
+.half-alt{
+    color: orange;
+}
+
+.my-skills h2{
+    color: #009CAA;
+    font-size: 7.5rem;
+    z-index: 0;
+    opacity: .5;
+    text-align: right;
+    padding-bottom: 20px;
+}
+.about-me-info h2{
+    color: #009CAA;
+    font-size: 7.5rem;
+    z-index: 0;
+    opacity: .5;
+    text-align: left;
+    padding-bottom: 20px;
+}
+.my-skills h4{
+    color: #009CAA;
+    font-size: 7.5rem;
+    z-index: 0;
+    opacity: .5;
+    text-align: left;
+    padding-bottom: 20px;
+}
+.aboutMe{
+    box-shadow: 0 0 2rem rgba(0,0,0,.25);
+    padding: 50px;
+    max-width: 1000px;
+    z-index: 1;
+}
+
+a.aboutMe p {
+    font-size: 1.3rem;
+    color: #BEBEBE;
+}
+
+.aboutMe p:nth-child(2),
+.aboutMe p:last-child{
+    margin-top: 30px;
+}
+
+.my-work h2{
+    color: #009CAA;
+    font-size: 7.5rem;
+    z-index: 0;
+    opacity: .5;
+    text-align: right;
+}
+.my-work h3{
+    padding-bottom: 40px;
+}
+/* https://www.freecodecamp.org/news/how-to-create-a-lightbox-using-html-css-and-javascript/ */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+/* You define the style of our previews here, you are using flex to display the images
+   "responsively". */
+
+.preview {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row > .col {
+    padding: 0 8px;
+}
+
+.col {
+    float: left;
+    width: 25%;
+}
+
+/* Now you want to define what the lightbox will look like. Note that you have the display
+   as none. You don't want it to show until the user clicks on one of the previews.
+   You will change this display property with JavaScript below. */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 10px 62px 0px 62px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 0 0 0 0;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Same with your slides, you set the display to none, because you want to choose which
+   one is shown at a time. */
+
+.slide {
+    display: none;
+}
+
+.image-slide {
+    width: 100%;
+}
+
+.modal-preview {
+    width: 100%;
+}
+
+.dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* You want the previews a little transparent to show that they are "inactive".
+   You then add an .active or :hover class to animate the selections for your user when
+   they interact with your controls and clickable content.
+ */
+
+img.preview, img.modal-preview {
+    opacity: 0.6;
+}
+
+img.active,
+.preview:hover,
+.modal-preview:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.previous,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previous:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.previousWork{
+    padding-bottom: 50px;
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 7.5rem;
+    opacity: .1;
+    color: #707070;
+
+}
+.contact {
+    background: #181818;
+
+}
+.contact p{
+    text-align: center;
+    font-weight: bold;
+    color: #ED5565;
+}
+form input,
+form textarea {
+    display: block;
+    width: 500px;
+    padding: 20px;
+    background-color: #252627;
+    border: 3px solid #707070;
+    margin: 20px 0;
+    outline: none;
+    font-size: 1.2rem;
+    color: #fff;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+form input:last-child{
+    width: 150px;
+    background-color: #ED5565;}
