@@ -498,7 +498,13 @@ body {
     float: left;
     width: 25%;
 }
-
+.col1{
+    float: left;
+    width: 25%;
+}
+.row > .col1{
+    padding: 0 8px;
+}
 /* Now you want to define what the lightbox will look like. Note that you have the display
    as none. You don't want it to show until the user clicks on one of the previews.
    You will change this display property with JavaScript below. */
